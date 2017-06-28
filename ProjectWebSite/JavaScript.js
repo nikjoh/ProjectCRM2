@@ -32,5 +32,12 @@ function PrintContacts() {
 //}
 //function SortContacts() {
 
+//}
+
+//function DeleteContact() {
+
+//}
+
+//function UpdateContact() {
 
 //}
