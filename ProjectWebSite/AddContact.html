@@ -3,8 +3,36 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+	<link href="Content/bootstrap.css" rel="stylesheet" />
+	<script src="Scripts/jquery-3.1.1.js"></script>
+	<script src="Scripts/bootstrap.js"></script>
+
+	<script src="JavaScript.js"></script>
+	<link href="StyleSheet.css" rel="stylesheet" />
 </head>
 <body>
+	<table>
+		<div id="div1">
+			<a href="#home">Home</a>
+			<a href="#news">Contacts</a>
+			<a href="#addContact">Add Contact</a>
+		</div>
+	<thead>
+		<tr>
+			<th onclick=""><abbr title="Insert first name on contact">First Name</abbr></th>
+			<th onclick=""><abbr title="Insert last name on contact">Last Name</abbr></th>
+			<th onclick=""><abbr title="Insert company name">Company</abbr></th>
+		</tr>
+	</thead>
+	</table>
+	<tfoot>
+		<tr>
+			<td><input type="text" id="firstName" /></td>
+			<td><input type="text" id="lastName" /></td>
+			<td><input type="text" id="company" /></td>
+		</tr>
+	</tfoot>
+	<td><input type="button" value="ADD CONTACT" onclick="GetContacts()" /></td>
 
 </body>
 </html>
