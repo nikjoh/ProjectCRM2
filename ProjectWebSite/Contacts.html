@@ -10,7 +10,7 @@
     <script src="JavaScript.js"></script>
     <link href="StyleSheet.css" rel="stylesheet" />
 
-    <title></title>
+    <title>Kund AB - Contacts</title>
 </head>
 <!--istället för body onload, för att gömma tabellen:
 $(document).ready(function(PrintContacts){
@@ -18,31 +18,34 @@ $("").click(function(rätt metod här) {
 $("#tableBody").hide(); });
 });-->
 <body onload="PrintContacts();">
-    <img id="logoKAB" src="Images/Logo_KAB.jpg" alt="Logo_KAB" />
 
-    <div id="div1">
-        <a href="Index.html">Home</a>
-        <a href="Contacts.html"style="color:#2a3d29">Contacts</a>
-        <a href="AddContact.html">Add Contact</a>
-    </div>
+    <nav>
+        <img id="logoKAB" src="Images/Logo_KAB.jpg" alt="Logo_KAB" />
+
+        <div id="div1">
+            <a href="Index.html">Home</a>
+            <a href="Contacts.html" style="color:#2a3d29">Contacts</a>
+            <a href="AddContact.html">Add Contact</a>
+        </div>
+    </nav>
 
     <hr />
 
-    
-        <table id="myTable">
-            <thead>
-                <tr>
-                    <th onclick=""><abbr title="Förnamn på kontaktperson">First Name</abbr></th>
-                    <th onclick=""><abbr title="Efternamn på kontaktperson">Last Name</abbr></th>
-                    <th onclick=""><abbr title="Företag...">Company</abbr></th>
-                </tr>
-            </thead>
 
-            <tbody id="tableBody"></tbody>
+    <table id="myTable">
+        <thead>
+            <tr>
+                <th onclick=""><abbr title="Förnamn på kontaktperson">First Name</abbr></th>
+                <th onclick=""><abbr title="Efternamn på kontaktperson">Last Name</abbr></th>
+                <th onclick=""><abbr title="Företag...">Company</abbr></th>
+            </tr>
+        </thead>
+
+        <tbody id="tableBody"></tbody>
 
 
-        </table>
-   
+    </table>
+
 
 
 
