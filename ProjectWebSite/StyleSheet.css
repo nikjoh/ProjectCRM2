@@ -1,26 +1,40 @@
 ﻿body {
 }
 #div1 {
-	list-style-type: none;
-	margin: 0;
-	padding: 20px;
-	overflow: hidden;
-	color: white;
-	background-color: green;
-	font-weight: bold;
-	width: 100%;
-	text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 20px;
+    overflow: hidden;
+    color: white;
+    background-color: #92d36e;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
 }
 a {
 	padding: 80px;
-	
+    color: white; 
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
 }
+
+    a:hover {
+        color: #648c4e;
+    }
+
+    a:visited {
+        color: white;
+    }
+
+    a:active {
+        color: #2a3d29;
+    }
 
 table th, td {
 	border: 1px solid black;
 	text-align: center;
 }
-thead
+
 thead {
 	background-color: green;
 	font-weight: bold;
@@ -29,4 +43,7 @@ thead {
 
 #logoKAB {
     width: 200px;
+    margin-left: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
