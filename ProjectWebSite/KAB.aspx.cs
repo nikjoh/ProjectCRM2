@@ -9,14 +9,31 @@ using Newtonsoft.Json;
 
 public partial class KAB : System.Web.UI.Page
 {
-        
+
     List<Person> contactList = new List<Person>();
     const string connectionString = "Data Source=localhost;Initial Catalog=Tellus;Integrated Security=True";
 
     protected void Page_Load(object sender, EventArgs e)
     {
+        #region Check url parameter to add a contact to database
+        string addContact = Request.QueryString["AddContact"];
+        if (addContact != null)
+        {
+            // get contact info
+            string firstName = Request.QueryString["FirstName"];
+            string lastName = Request.QueryString["LastName"];
+            string company = Request.QueryString["Company"];
+            // create contact in database
+            AddContact(firstName, lastName, company);
+
+        }
+        #endregion
+
         GetContacts();
         contactLiteral.Text = JsonConvert.SerializeObject(contactList, Formatting.Indented);
+
+
+
     }
 
     void AddContact(string firstName, string lastName, string company)
@@ -38,7 +55,7 @@ public partial class KAB : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-           
+
         }
         finally
         {
