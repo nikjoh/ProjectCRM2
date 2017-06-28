@@ -78,9 +78,19 @@ for (var i = 0; i < RowsInTable.length; i++) {
 }
 }
 
-//function DeleteContact() {
+function DeleteContact(id) {
 
-//}
+    // create url parameter
+    var params = jQuery.param({
+        'DeleteContact': id
+    });
+
+    $.getJSON(url + "?" + params)
+        .done(function (data) {
+            alert("Contact successfully deleted!!");
+            //PrintContacts();
+        });
+}
 
 //function UpdateContact() {
 

@@ -15,7 +15,7 @@ public partial class KAB : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        #region Check url parameter to add a contact to database
+        #region Check url parameter to ADD a contact to database
         string addContact = Request.QueryString["AddContact"];
         if (addContact != null)
         {
@@ -29,11 +29,47 @@ public partial class KAB : System.Web.UI.Page
         }
         #endregion
 
+        #region Check url parameter to DELETE a contact to database
+        string deleteContact = Request.QueryString["DeleteContact"];
+        if (deleteContact != null)
+        {
+            // get contact ID to remove and parse to int
+            int id = int.Parse(Request.QueryString["DeleteContact"]);
+            // delete contact in database
+            DeleteContact(id);
+
+        }
+        #endregion
+
         GetContacts();
         contactLiteral.Text = JsonConvert.SerializeObject(contactList, Formatting.Indented);
+        
+    }
 
+    void DeleteContact(int ID)
+    {
+        // create connection
+        SqlConnection myConnection = new SqlConnection();
+        myConnection.ConnectionString = connectionString;
 
+        try
+        {
+            myConnection.Open();
 
+            SqlCommand myCommand = new SqlCommand();
+            myCommand.Connection = myConnection;
+            myCommand.CommandText = "delete from Contact where ID=" + ID;
+
+            int rows = myCommand.ExecuteNonQuery();
+        }
+        catch (Exception ex)
+        {
+
+        }
+        finally
+        {
+            myConnection.Close();
+        }
     }
 
     void AddContact(string firstName, string lastName, string company)
