@@ -1,2 +1,24 @@
 ﻿body {
 }
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	color: white;
+	background-color: green;
+	font-weight: bold;
+}
+
+li {
+	float: center;
+}
+table th, td {
+	border: 1px solid black;
+	text-align: center;
+}
+thead {
+	background-color: green;
+	font-weight: bold;
+	color: white;
+}
