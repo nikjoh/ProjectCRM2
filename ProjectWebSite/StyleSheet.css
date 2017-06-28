@@ -1,8 +1,26 @@
 ﻿
 body {
     height: 100%;
-    margin: 0; 
-    padding: 0; 
+    margin: 0px;
+    padding: 0;
+    margin-top: 100px; 
+}
+
+nav {
+    position: fixed;
+    overflow: hidden;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 100;
+    width: 100%;
+}
+
+.navbar-fixed {
+    top: 0;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
 }
 
 #div1 {
@@ -20,6 +38,10 @@ body {
     text-align: center;
 }
 
+#buttons {
+    color: pink;
+}
+
 a {
     padding: 80px;
     color: white;
@@ -30,14 +52,6 @@ a {
 
     a:hover {
         color: #648c4e;
-    }
-
-    a:visited {
-        color: white;
-    }
-
-    a:active {
-        color: #2a3d29;
     }
 
 table th, td {
@@ -60,17 +74,60 @@ thead {
 }
 
 #myTable {
-    width: 70%;
+    width: 60%;
     margin: auto;
 }
 
-footer {
+.site-footer {
     height: -100px;
+    position: fixed;
     right: 0;
     bottom: 0;
     left: 0;
     background-color: #92d36e;
     text-align: right;
-    padding-right: 20%; 
+    padding-right: 20%;
+}
+
+/*ViewContacts-filen*/
+#div2 {
+	padding: 0px;
+	margin: auto;
+	width: 60%;
+	text-align: center;
+	overflow: hidden;
+	font-weight: bold;
+	border: 2px solid black;
+}
+
+nav {
+	float: right;
+	max-width: 160px;
+	margin: 0;
+	padding: 1em;
+}
+
+nav, ul {
+	float: right;
+	list-style-type: none;
+	padding: 1em;
+	margin-left: 200px;
+	border-left: 1px solid black;
+	overflow: hidden;
+}
+
+section {
+	float: left;
+	margin-right: 170px;
+	padding: 1em;
+	overflow: hidden;
+}
+
+header, footer {
+	padding: 0px;
+	margin: 0px;
+	color: white;
+	background-color: #92d36e;
+	text-align: center;
 }
 
