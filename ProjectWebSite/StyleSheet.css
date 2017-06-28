@@ -20,6 +20,22 @@ body {
     text-align: center;
 }
 
+#div2 {
+	padding: 1px;
+	margin: auto;
+	width: 60%;
+	text-align: center;
+	overflow: hidden;
+	font-weight: bold;
+	border: 2px solid black;
+}
+aside {
+	float:right;
+}
+section {
+	float: left;
+}
+
 a {
     padding: 80px;
     color: white;
