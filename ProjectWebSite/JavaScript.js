@@ -81,11 +81,12 @@ for (var i = 0; i < RowsInTable.length; i++) {
 function DeleteContact(id) {
 
     // create url parameter
-    var params = jQuery.param({
+    var params = "?";
+    params += jQuery.param({
         'DeleteContact': id
     });
 
-    $.getJSON(url + "?" + params)
+    $.getJSON('http://localhost:62111/KAB.aspx' + params)
         .done(function (data) {
             alert("Contact successfully deleted!!");
             //PrintContacts();
