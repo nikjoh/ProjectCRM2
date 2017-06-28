@@ -21,3 +21,4 @@ myTR.appendChild(myCompany);
 
 myBody.appendChild(myTR);
 }
+
