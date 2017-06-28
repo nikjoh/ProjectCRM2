@@ -1,14 +1,14 @@
 ﻿
 
 
-function GetContacts(){
+function PrintContacts(){
     $.getJSON('http://localhost:62111/KAB.aspx').done(function (data) {
 
         $("#tableBody").children().remove();
 
         var stringToAppend = "";
         for (var i = 0; i < data.length; i++) {
-            stringToAppend += "<tr><td>" + data[i].FirstName + "</td><td>" + data[i].LastName + "</td>" + "<td>" + data[i].Company + "</td>";
+            stringToAppend += "<tr><td onclick='alert("+i+");'>" + data[i].FirstName + "</td><td>" + data[i].LastName + "</td>" + "<td>" + data[i].Company + "</td>";
             //stringToAppend += "<td>" + data[i].LastName + "</td>";
             //stringToAppend += "<td>" + data[i].Firstname + "</td>";
 
