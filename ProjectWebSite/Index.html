@@ -3,7 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
-
+	<!-- bootstrap här -->
+	<!-- jquery här -->
+	<script src="JavaScript.js"></script>
+	<link href="StyleSheet.css" rel="stylesheet" />
 </head>
 <body>
     <h1>KAB-logga här</h1>
@@ -13,5 +16,26 @@
 		<li><a href="#addContact">Add Contact</a></li>
 	</ul>
 		<hr />
+	<thead>
+		<tr>
+			<th onclick=""><abbr title="Förnamn på kontaktperson">First Name</abbr></th>
+			<th onclick=""><abbr title="Efternamn på kontaktperson">Last Name</abbr></th>
+			<th onclick=""><abbr title="Företag...">Company</abbr></th>
+		</tr>
+	</thead>
+	<table id="myTable">
+
+	</table>
+	<tbody id="tableBody">
+
+	</tbody>
+	<tfoot>
+		<tr>
+			<td><input type="text" id="firstName" /></td>
+			<td><input type="text" id="lastName" /></td>			
+			<td><input type="text" id="company" /></td>
+		</tr>
+	</tfoot>
+	
 </body>
 </html>
