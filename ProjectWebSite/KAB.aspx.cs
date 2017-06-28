@@ -43,15 +43,15 @@ public partial class KAB : System.Web.UI.Page
                 string firstName = myReader["Firstname"].ToString();
                 string lastName = myReader["Lastname"].ToString();
                 string company = myReader["Company"].ToString();
-                if (company != "")
-                {
-                    contactList.Add(new Person(id, firstName, lastName, company));
-                }
-                else
-                {
-                    contactList.Add(new Person(id, firstName, lastName));
-                }
-                
+                //if (company != "")
+                //{
+                contactList.Add(new Person(id, firstName, lastName, company));
+                //}
+                //else
+                //{
+                //    contactList.Add(new Person(id, firstName, lastName));
+                //}
+
             }
         }
         catch (Exception ex)
