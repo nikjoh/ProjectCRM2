@@ -1,24 +1,30 @@
-﻿function AddContact() {
- var firstName = document.getElementById("firstName").value;
-var lastName = document.getElementById("lastName").value;
-var company = document.getElementById("company").value;
-
-var myBody = document.getElementById("tableBody");
-var myTR = document.createElement("tr");
+﻿
 
 
-var myTDFirstName = document.createElement("td");
-myTDFirstName.innerHTML = firstName;
-myTR.appendChild(myTDFirstName);
+function GetContacts(){
+    $.getJSON('http://localhost:62111/KAB.aspx').done(function (data) {
 
-var myTDLastName = document.createElement("td");
-myTDLastName.innerHTML = lastName;
-myTR.appendChild(myTDLastName);
+        $("#tableBody").children().remove();
 
-var myTDCompany = document.createElement("td");
-myTDCompany.innerHTML = company;
-myTR.appendChild(myCompany);
+        var stringToAppend = "";
+        for (var i = 0; i < data.length; i++) {
+            stringToAppend += "<tr><td>" + data[i].FirstName + "</td><td>" + data[i].LastName + "</td>" + "<td>" + data[i].Company + "</td>";
+            //stringToAppend += "<td>" + data[i].LastName + "</td>";
+            //stringToAppend += "<td>" + data[i].Firstname + "</td>";
 
-myBody.appendChild(myTR);
+            //if (data[i].Adresses) {
+
+
+            //    for (var j = 0; j < data[i].Adresses.length; j++) {
+            //        stringToAppend += "<td>" + data[i].Adresses[j].Street + "</td><td>" + data[i].Adresses[j].City + "</td>";
+            //    }
+            //}
+
+            stringToAppend += "</tr>";
+        }
+        //stringToAppend += "";
+
+        $("#tableBody").append(stringToAppend);
+
+    });
 }
-
