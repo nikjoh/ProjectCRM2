@@ -1,7 +1,7 @@
-﻿AddContact(){
+﻿//AddContact(){
 
 
-}
+//}
 
 //PrintContacts
 function PrintContacts() {
