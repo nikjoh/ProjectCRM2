@@ -12,7 +12,7 @@
 
     <title></title>
 </head>
-<body>
+<body onload="PrintContacts();">
     <img id="logoKAB" src="Images/Logo_KAB.jpg" alt="Logo_KAB" />
 
     <div id="div1">
@@ -22,5 +22,24 @@
     </div>
 
     <hr />
+
+
+    <table id="myTable">
+        <thead>
+            <tr>
+                <th onclick=""><abbr title="Förnamn på kontaktperson">First Name</abbr></th>
+                <th onclick=""><abbr title="Efternamn på kontaktperson">Last Name</abbr></th>
+                <th onclick=""><abbr title="Företag...">Company</abbr></th>
+            </tr>
+        </thead>
+
+        <tbody id="tableBody"></tbody>
+       
+
+      </table>
+
+
+
+
 </body>
 </html>

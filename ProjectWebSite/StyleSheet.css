@@ -50,3 +50,8 @@ thead {
     margin-top: 1%;
     margin-bottom: 1%;
 }
+
+#myTable{
+    width : 70%;
+    margin: auto;
+}
