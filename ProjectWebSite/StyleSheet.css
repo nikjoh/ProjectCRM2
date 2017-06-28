@@ -88,3 +88,46 @@ thead {
     text-align: right;
     padding-right: 20%;
 }
+
+/*ViewContacts-filen*/
+#div2 {
+	padding: 0px;
+	margin: auto;
+	width: 60%;
+	text-align: center;
+	overflow: hidden;
+	font-weight: bold;
+	border: 2px solid black;
+}
+
+nav {
+	float: right;
+	max-width: 160px;
+	margin: 0;
+	padding: 1em;
+}
+
+nav, ul {
+	float: right;
+	list-style-type: none;
+	padding: 1em;
+	margin-left: 200px;
+	border-left: 1px solid black;
+	overflow: hidden;
+}
+
+section {
+	float: left;
+	margin-right: 170px;
+	padding: 1em;
+	overflow: hidden;
+}
+
+header, footer {
+	padding: 0px;
+	margin: 0px;
+	color: white;
+	background-color: #92d36e;
+	text-align: center;
+}
+
