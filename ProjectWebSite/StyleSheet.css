@@ -15,7 +15,7 @@ body {
     overflow: hidden;
     color: white;
     background-color: #92d36e;
-    font-weight: bold;
+    font-weight: normal;
     width: 100%;
     text-align: center;
 }
@@ -48,13 +48,13 @@ table th, td {
 thead {
     background-color: #92d36e;
     font-family: 'Roboto', sans-serif;
-    font-weight: normal;
+    font-size: 15px;
     color: white;
 }
 
 #logoKAB {
     width: 200px;
-    margin-left: 1%;
+    margin-left: 20%;
     margin-top: 1%;
     margin-bottom: 1%;
 }
