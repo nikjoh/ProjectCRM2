@@ -1,22 +1,27 @@
 ﻿body {
 }
-ul {
+#div1 {
 	list-style-type: none;
 	margin: 0;
-	padding: 0;
+	padding: 20px;
 	overflow: hidden;
 	color: white;
 	background-color: green;
 	font-weight: bold;
+	width: 100%;
+	text-align: center;
+}
+a {
+	padding: 80px;
+	
 }
 
-li {
-	float: center;
-}
+
 table th, td {
 	border: 1px solid black;
 	text-align: center;
 }
+thead
 thead {
 	background-color: green;
 	font-weight: bold;
