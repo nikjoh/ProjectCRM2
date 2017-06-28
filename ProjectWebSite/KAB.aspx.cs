@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 
 public partial class KAB : System.Web.UI.Page
 {
-
+        
     List<Person> contactList = new List<Person>();
     const string connectionString = "Data Source=localhost;Initial Catalog=Tellus;Integrated Security=True";
 
@@ -19,6 +19,32 @@ public partial class KAB : System.Web.UI.Page
         contactLiteral.Text = JsonConvert.SerializeObject(contactList, Formatting.Indented);
     }
 
+    void AddContact(string firstName, string lastName, string company)
+    {
+        // create connection
+        SqlConnection myConnection = new SqlConnection();
+        myConnection.ConnectionString = connectionString;
+
+        try
+        {
+            myConnection.Open();
+
+            SqlCommand myCommand = new SqlCommand();
+            myCommand.Connection = myConnection;
+            myCommand.CommandText = "insert into Contact (Firstname, Lastname, Company) values ('" + firstName + "', '" + lastName + "', '" + company + "')";
+
+            int rows = myCommand.ExecuteNonQuery();
+
+        }
+        catch (Exception ex)
+        {
+
+        }
+        finally
+        {
+            myConnection.Close();
+        }
+    }
 
     void GetContacts()
     {
