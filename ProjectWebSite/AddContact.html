@@ -7,18 +7,19 @@
 	<script src="Scripts/jquery-3.1.1.js"></script>
 	<script src="Scripts/bootstrap.js"></script>
 
-	<script src="JavaScript.js"></script>
+    <script src="addContactScript.js"></script>
+	<!--<script src="JavaScript.js"></script>-->
 	<link href="StyleSheet.css" rel="stylesheet" />
 </head>
 <body>
-    <nav>
+    <!--<nav>-->
         <img id="logoKAB" src="Images/Logo_KAB.jpg" alt="Logo_KAB" />
         <div id="div1">
             <a href="Index.html">Home</a>
             <a href="Contacts.html">Contacts</a>
             <a href="AddContact.html" style="color:#2a3d29">Add contact</a>
         </div>
-    </nav>
+    <!--</nav>-->
 	<hr />
     <table id="myTable">
         <thead>
@@ -28,7 +29,9 @@
                 <th onclick=""><abbr title="Insert company name">Company</abbr></th>
             </tr>
         </thead>
+
         <tbody id="tableBody"></tbody>
+
         <tfoot>
             <tr>
                 <td><input type="text" id="firstName" /></td>
