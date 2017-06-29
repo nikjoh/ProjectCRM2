@@ -45,16 +45,23 @@ public partial class OneContact : System.Web.UI.Page
                 string firstName = myReader["Firstname"].ToString();
                 string lastName = myReader["Lastname"].ToString();
                 string company = myReader["Company"].ToString();
-                //if (company != "")
-                //{
-                aPerson =new Person(id, firstName, lastName, company);
-                //}
-                //else
-                //{
-                //    contactList.Add(new Person(id, firstName, lastName));
-                //}
+
+
+                //string phoneType = myReader["Phonetype"].ToString();
+                //string phoneNumber = myReader["Phonenumber"].ToString();
+                
+                //string emailType = myReader["Emailtype"].ToString();
+                //string email = myReader["Email"].ToString();
+
+
+                aPerson = new Person(id, firstName, lastName, company);
+                //aPerson.Phones.Add(new Phone(phoneType, phoneNumber));
+                
+                //aPerson.Emails.Add(new Email(emailType, email));
+
 
             }
+
         }
         catch (Exception ex)
         {
@@ -64,9 +71,33 @@ public partial class OneContact : System.Web.UI.Page
         {
             myConnection.Close();
         }
-    
 
+        try
+        {
+            myConnection.Open();
+            SqlCommand myCommand2 = new SqlCommand();
+            myCommand2.Connection = myConnection;
+            
+            myCommand2.CommandText = "select * from Adress where CID =" + ID;
+            SqlDataReader myReader2 = myCommand2.ExecuteReader();
 
+            while (myReader2.Read())
+            {
+                string addressType = myReader2["Adresstype"].ToString();
+                string town = myReader2["Town"].ToString();
+                string street = myReader2["Street"].ToString();
 
-}
+                aPerson.Addresses.Add(new Address(addressType, town, street));
+            }
+        }
+        catch (Exception)
+        {
+
+            
+        }
+        finally
+        {
+            myConnection.Close();
+        }
+    }
 }

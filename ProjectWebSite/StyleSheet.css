@@ -112,10 +112,14 @@ thead {
 
 
 #viewContact  {
-	float: left;
+	/*float: left;*/
 	padding: 10px;
 	overflow: hidden;
 	font-weight: bold;
+    align-content:center;
+    width :100%;
+    border-collapse:collapse;
+   
 }
 
 header, footer {
