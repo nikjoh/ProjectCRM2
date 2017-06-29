@@ -23,27 +23,33 @@
     </nav>
 
     <hr />
-    <table id="myTable">
-        <thead>
-            <tr>
-                <th onclick=""><abbr title="First name of each contact">First Name</abbr></th>
-                <th onclick=""><abbr title="Last name of each contact">Last Name</abbr></th>
-                <th onclick=""><abbr title="Company name">Company</abbr></th>
-            </tr>
-        </thead>
 
-        <tbody id="tableBody"></tbody>
-        <tfoot>
-            <tr>
-                <td><input type="text" id="firstName" /></td>
-                <td><input type="text" id="lastName" /></td>
-                <td><input type="text" id="company" /></td>
-            </tr>
-        </tfoot>
-    </table>
-    <!--<div id="buttons">
-        <input type="button" value="Search" onclick="" />
-    </div>-->
+    <div id="searchField">
+        <h1>Search:</h1> 
+        <form>
+            <div id="searchBox">
+                First name: <br />
+                <input type="text" name="firstName" />
+            </div>
+            <div id="searchBox">
+                Last name: <br />
+                <input type="text" name="lastName" />
+            </div>
+            <div id="searchBox">
+                Company: <br />
+                <input type="text" name="company" />
+            </div>
+            <div id="searchBox">
+                Email: <br />
+                <input type="text" name="email" />
+            </div>
+            <div class="buttons">
+                <input type="button" value="Search" onclick="" />
+            </div>
+        </form>
+    </div>
+
+
 
     <footer class="site-footer">
         <img id="logoKAB" src="Images/Logo_KAB.jpg" alt="Logo_KAB" />
