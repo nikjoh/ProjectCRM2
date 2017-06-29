@@ -43,7 +43,6 @@ public partial class KAB : System.Web.UI.Page
 
         GetContacts();
         contactLiteral.Text = JsonConvert.SerializeObject(contactList, Formatting.Indented);
-        
     }
 
     void DeleteContact(int ID)
