@@ -7,7 +7,6 @@ body {
 }
 
 /*För att få menyn att stanna vid scroll*/
-
 #banner {
     width: 100%;
     height: auto;
@@ -48,8 +47,10 @@ nav {
 	/*position: relative;*/
 }
 
-#buttons {
-    color: pink;
+.buttons {
+    padding: 2%;
+    color: black;
+    border-color: red;
 }
 
 /*Flikar i menyn*/
@@ -134,3 +135,9 @@ header, footer {
 	position: relative;
 }
 
+#searchField {
+    width: 50%; 
+    border: 1px solid black; 
+    margin: auto; 
+    text-align: center; 
+}
