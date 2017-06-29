@@ -35,8 +35,10 @@ public partial class OneContact : System.Web.UI.Page
             //Läser in person
             SqlCommand myCommand = new SqlCommand();
             myCommand.Connection = myConnection;
-            myCommand.CommandText = "select * from Contact where ID ="+ID;
 
+            myCommand.CommandText = "select * from Contact where ID="+ID+" Select * from Adress where Adress.CID="+ID;
+
+            //myCommand.CommandText = "select * from Contact where ID =" + ID;
             //int rows = myCommand.ExecuteNonQuery();
             SqlDataReader myReader = myCommand.ExecuteReader();
 

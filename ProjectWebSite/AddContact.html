@@ -29,6 +29,7 @@
                 <th onclick=""><abbr title="Insert first name on contact">First Name</abbr></th>
                 <th onclick=""><abbr title="Insert last name on contact">Last Name</abbr></th>
                 <th onclick=""><abbr title="Insert company name">Company</abbr></th>
+                <th onclick=""><abbr title="Command"></abbr></th>
             </tr>
         </thead>
 
@@ -39,10 +40,80 @@
                 <td><input type="text" id="firstName" /></td>
                 <td><input type="text" id="lastName" /></td>
                 <td><input type="text" id="company" /></td>
+                <td><input type="button" value="Add Contact" onclick="AddContact()"/></td>
             </tr>
         </tfoot>
+
+      <!--Lägg till Adress--> 
     </table>
-        <input type="button" value="Add Contact" onclick="AddContact()" />
+    <hr />
+       <table id="myAdressTable">
+           <thead>
+               <tr>
+                   <th onclick=""><abbr >Adress type</abbr></th>
+                   <th onclick=""><abbr >Town</abbr></th>
+                   <th onclick=""><abbr >Street</abbr></th>
+                   <th onclick=""><abbr ></abbr></th>
+               </tr>
+               
+           </thead>
+
+           <tbody>
+               <tr>
+                   <th><input type="text"/></th>
+                   <th><input type="text" /></th>
+                   <th><input type="text" /></th>
+                   <th><input type="button" value="Add Contact" onclick="AddAdress()"/></th>
+               </tr>
+           </tbody>
+
+
+       </table>
+    <hr />
+    <!--Lägg till Email-->
+    <table id="myAdressTable">
+        <thead>
+            <tr>
+                <th onclick=""><abbr >Email type</abbr></th>
+                <th onclick=""><abbr >Email</abbr></th>
+               
+                <th onclick=""><abbr ></abbr></th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+            <tr>
+                <th><input type="text" /></th>
+                <th><input type="text" /></th>
+               
+                <th><input type="button" value="Add Email" onclick="AddEmail()" /></th>
+            </tr>
+        </tbody>
+    </table>
+    <hr />
+
+    <!--Lägg till Telefon-->
+    <table id="myAdressTable">
+        <thead>
+            <tr>
+                <th onclick=""><abbr>Phone type</abbr></th>
+                <th onclick=""><abbr>Phonenumber</abbr></th>
+
+                <th onclick=""><abbr></abbr></th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+            <tr>
+                <th><input type="text" /></th>
+                <th><input type="text" /></th>
+
+                <th><input type="button" value="Add Email" onclick="Add phone()" /></th>
+            </tr>
+        </tbody>
+    </table>
 
 	<footer class="site-footer">
 		<img id="logoKAB" src="Images/Logo_KAB.jpg" alt="Logo_KAB" />

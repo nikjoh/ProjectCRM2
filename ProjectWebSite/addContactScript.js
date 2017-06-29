@@ -6,7 +6,7 @@ function AddContact() {
     company = $("#company").val();
 
     // check to see if firstname and lastname is set
-    if (firstName != "" && lastName != "") {
+    if (firstName !== "" && lastName !== "") {
         // build url parameter
         var params = "?";
         params += jQuery.param({
