@@ -14,9 +14,9 @@ public class Person
     public string LastName { get; set; }
     public string Company{ get; set; }
 
-    public List<Address> Addresses;
-    public List<Email> Emails;
-    public List<Phone> Phones;
+    public List<Address> Addresses = new List<Address>();
+    public List<Email> Emails = new List<Email>();
+    public List<Phone> Phones = new List<Phone>();
 
     public Person(int id, string firstName, string lastName)
     {

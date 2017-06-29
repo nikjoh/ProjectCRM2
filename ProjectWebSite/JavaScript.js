@@ -41,7 +41,7 @@ function PrintContacts() {
         var stringToAppend = "";
         for (var i = 0; i < data.length; i++) {
             var s = "<a href='http://localhost:62111/ViewContact.html?ID=" + data[i].ID + "'>";
-            stringToAppend += "<tr><td>" + s + data[i].FirstName + "</a></td><td>" + data[i].LastName + "</td>" + "<td>" + data[i].Company + "</td>";
+            stringToAppend += "<tr><td>" + s + data[i].FirstName + "</a></td><td>" + data[i].LastName + "</td><td>" + data[i].Company + "</td>";
             //stringToAppend += "<tr><td>" + data[i].FirstName + "</td><td>" + data[i].LastName + "</td>" + "<td>" + data[i].Company + "</td>";
                     
             stringToAppend += "</tr>";
@@ -121,7 +121,7 @@ function PrintContact() {
 
         $('#FN').text(data.FirstName+" "+ data.LastName);
         $('#FTG').text(data.Company);
-
+        $('#phoneTypeData').text();
     });
 }
 

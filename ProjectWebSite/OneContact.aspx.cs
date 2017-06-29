@@ -32,6 +32,7 @@ public partial class OneContact : System.Web.UI.Page
         {
             myConnection.Open();
 
+            //Läser in person
             SqlCommand myCommand = new SqlCommand();
             myCommand.Connection = myConnection;
             myCommand.CommandText = "select * from Contact where ID ="+ID;
@@ -72,6 +73,7 @@ public partial class OneContact : System.Web.UI.Page
             myConnection.Close();
         }
 
+        //Läser in adress
         try
         {
             myConnection.Open();
@@ -94,6 +96,35 @@ public partial class OneContact : System.Web.UI.Page
         {
 
             
+        }
+        finally
+        {
+            myConnection.Close();
+        }
+
+        //Läser in Telefon
+        try
+        {
+            myConnection.Open();
+            SqlCommand myCommandPhone = new SqlCommand();
+            myCommandPhone.Connection = myConnection;
+
+            myCommandPhone.CommandText = "select * from Telefon where CID =" + ID;
+            SqlDataReader myReaderPhone = myCommandPhone.ExecuteReader();
+
+            while (myReaderPhone.Read())
+            {
+                string phoneType = myReaderPhone["Phonetype"].ToString();
+                string phoneNumber = myReaderPhone["Phonenumber"].ToString();
+                
+
+                aPerson.Phones.Add(new Phone(phoneType, phoneNumber));
+            }
+        }
+        catch (Exception)
+        {
+
+
         }
         finally
         {
