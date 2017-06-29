@@ -53,7 +53,6 @@ function PrintContacts() {
     });
 }
 
-
 //function Hide() {
     
 //    $("#contactList").hide();
@@ -114,3 +113,25 @@ $(document).ready(function () {
         }
     });
 });
+
+function PrintContact() {
+    var personID = GetURLParameter('ID');
+
+    $.getJSON('http://localhost:62111/OneContact.aspx?PID=' + personID).done(function (data) {
+
+        $('#FN').text(data.FirstName+" "+ data.LastName);
+        $('#FTG').text(data.Company);
+
+    });
+}
+
+function GetURLParameter(sParam) {
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam) {
+            return sParameterName[1];
+        }
+    }
+}

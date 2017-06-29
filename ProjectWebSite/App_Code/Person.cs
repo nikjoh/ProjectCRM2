@@ -32,4 +32,8 @@ public class Person
         LastName = lastName;
         Company = company;
     }
+    public Person()
+    {
+
+    }
 }

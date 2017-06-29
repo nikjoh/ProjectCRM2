@@ -11,7 +11,7 @@
 	<link href="StyleSheet.css" rel="stylesheet" />
 	<title>Kund AB - Contact</title>
 </head>
-<body>
+<body onload="PrintContact();">
 	<img id="logoKAB" src="Images/Logo_KAB.jpg" alt="Logo_KAB" />
 
 	<div id="div1">
@@ -24,8 +24,8 @@
 
 	<div id="div2">
 		<header>
-			<h2>Namn:</h2>
-			<h3>Företaget</h3>
+			<h2 id="FN"></h2>
+			<h3 id="FTG"></h3>
 		</header>
 
 		<table id="viewContact">
