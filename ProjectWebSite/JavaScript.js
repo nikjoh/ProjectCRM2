@@ -106,10 +106,10 @@ $(document).ready(function () {
         //console.log($(window).scrollTop())
 
         if ($(window).scrollTop() > 280) {
-            $('nav').addClass('navbar-fixed');
+            $('nav').addClass('nav-fixed');
         }
         if ($(window).scrollTop() < 281) {
-            $('nav').removeClass('navbar-fixed');
+            $('nav').removeClass('nav-fixed');
         }
     });
 });
